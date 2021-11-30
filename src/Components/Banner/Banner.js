@@ -1,5 +1,5 @@
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faMailBulk } from '@fortawesome/free-solid-svg-icons';
+import { faArrowAltCircleRight, faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import { Link } from 'react-router-dom';
@@ -7,37 +7,46 @@ import "./Banner.css"
 import Profile from "../../Images/profile.jpg"
 import Typewriter from 'typewriter-effect';
 import { HashLink } from 'react-router-hash-link';
-import { Nav } from 'react-bootstrap';
+import "animate.css/animate.min.css";
+import ScrollAnimation from 'react-animate-on-scroll';
+
 const Banner = () => {
     return (
         <div className="py-5 Banner">
-            <div className="container">
-                <div className="text-center my-4 text-white row">
-                    <div className="col-lg-6 mx-auto">
-                        <img className="w-25 img-thumbnail rounded-circle" src={Profile} alt="" />
-                        <h5 className="my-2">Hello, I'm</h5>
-                        <h2 className="my-2">Nepolion Chakma</h2>
-                        <strong className="fs-4 text-warning">
-                            <Typewriter
-                                options={{
-                                    strings: ['React Developer', 'Fornt-End Developer', 'Full-Stack Developer'],
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                            />
-                        </strong>
-                        <div className="text-white">
-                            <FontAwesomeIcon icon={faGithub} className="fs-2 m-3" />
-                            <FontAwesomeIcon icon={faLinkedin} className="fs-2 m-3" />
-                            <FontAwesomeIcon icon={faMailBulk} className="fs-2 m-3" />
+            <ScrollAnimation
+                animateIn='fadeIn'
+                animateOut='fadeOut'>
+                <div className="container">
+                    <div className="text-center my-4 text-white row">
+                        <div className="col-lg-6 mx-auto">
+                            <img className="w-25 img-thumbnail rounded-circle" src={Profile} alt="" />
+                            <h5 className="my-2">Hello Dear, I'm</h5>
+                            <h2 className="my-2">Nepolion Chakma</h2>
+                            <strong className="fs-4 text-warning">
+                                <Typewriter
+                                    options={{
+                                        strings: ['React Developer', 'Fornt-End Developer', 'Full-Stack Developer'],
+                                        autoStart: true,
+                                        loop: true,
+                                    }}
+                                />
+                            </strong>
+                            <div className="text-white">
+                                <a href="https://github.com/nepolionchakma"> <FontAwesomeIcon icon={faGithub} className="text-white fs-2 m-3" /></a>
+                                <a href="https://www.linkedin.com/in/nepolionchakma/"> <FontAwesomeIcon icon={faLinkedin} className="text-white fs-2 m-3" /></a>
+                            </div>
+                            <div>
+                                <a href="https://drive.google.com/file/d/1R0gB4ISkrqWWpw7JqxwKmUmRLKr2znPi"
+                                    className="inline-block text-white fw-bold d-inline mx-2 nav-link btn btn-success">Resume <FontAwesomeIcon icon={faFileDownload} /></a>
+                                <Link as={HashLink} to="/explore" className="inline-block text-white fw-bold d-inline mx-2 nav-link btn btn-success">Explore Me <FontAwesomeIcon icon={faArrowAltCircleRight} /></Link>
+                            </div>
                         </div>
-                        <Nav.Link as={HashLink} to="/home#contact" className="text-white fw-bold  w-25 mx-auto nav-link btn btn-danger">Hire Me</Nav.Link>
+
                     </div>
-
                 </div>
-            </div>
-
+            </ScrollAnimation>
         </div>
+
     );
 };
 
