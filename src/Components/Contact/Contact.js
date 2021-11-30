@@ -1,11 +1,25 @@
-import React from 'react';
-import { FormControl, TextField, FormHelperText, Box, Button } from '@mui/material';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
+import { TextField, FormHelperText, Box, Button } from '@mui/material';
 
 const Contact = () => {
 
-    const onSubmit = data => console.log(data);
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        alert("send")
+
+        emailjs.sendForm('gmail', 'portfolio', form.current, 'user_Vdq6cw6v58oS4ztuLSfrc')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset();
+    }
     return (
-        <div className="container">
+        <div className="container" id="contact">
             <h1 className="my-5 fw-bold text-center text-white">Get in Touch</h1>
             <div className="row m-0">
                 <div className="col-lg-2 text-white">
@@ -14,7 +28,7 @@ const Contact = () => {
                 </div>
 
                 <div className="col-lg-9 text-white">
-                    <FormControl onSubmit={onSubmit}>
+                    <form ref={form} onSubmit={sendEmail}>
                         <Box
                             sx={{
                                 width: '100%',
@@ -23,17 +37,17 @@ const Contact = () => {
                             className="text-white"
                         >
 
-                            <TextField sx={{ m: 1 }} fullWidth id="name" label="Name" variant="outlined" />
-                            <TextField sx={{ m: 1 }} fullWidth id="email" label="Email" variant="outlined" />
-                            <TextField sx={{ m: 1 }} fullWidth id="subject" label="Subject" variant="outlined" />
+                            <TextField sx={{ m: 1 }} fullWidth id="name" label="Name" variant="outlined" name="name" />
+                            <TextField sx={{ m: 1 }} fullWidth id="email" label="Email" variant="outlined" name="email" />
+                            <TextField sx={{ m: 1 }} fullWidth id="phone" label="Phone" variant="outlined" name="phone" />
+                            <TextField sx={{ m: 1 }} fullWidth id="subject" label="Subject" variant="outlined" name="subject" />
                             <TextField sx={{ m: 1 }} fullWidth multiline maxRows={4} aria-label="minimum height"
-                                minRows={3} id="messages" label="Messages" variant="outlined" />
+                                minRows={3} id="message" label="Message" variant="outlined" name="message" />
 
-                            <FormHelperText id="my-helper-text">We'll never share your email.</FormHelperText>
+                            <FormHelperText id="my-helper-text"></FormHelperText>
                             <Button sx={{ m: 1 }} type="submit" variant="contained">Submit</Button>
                         </Box>
-
-                    </FormControl>
+                    </form>
                 </div>
 
             </div>

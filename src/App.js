@@ -6,12 +6,12 @@ import {
   Route
 } from "react-router-dom";
 import Home from './Components/Home/Home';
-import Nav from './Components/Nav/Nav';
+import Header from './Components/Header/Header';
 
 function App() {
   return (
     <Router>
-      <Nav />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />

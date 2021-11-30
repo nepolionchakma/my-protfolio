@@ -4,7 +4,7 @@ import "./Services.css"
 const Services = () => {
     return (
         <div className="container py-5 text-white">
-            <h1 className="my-5 fw-bold text-center">Services</h1>
+            <h1 className="my-5 fw-bold text-center">Projects</h1>
             <div className="row m-0 ">
                 <div className="col-lg-4 mx-auto py-3  text-center rounded ">
                     <div className=" service-1 p-3 m-2 rounded">

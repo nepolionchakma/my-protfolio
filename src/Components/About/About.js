@@ -1,14 +1,16 @@
 import React from 'react';
 import { faFileDownload } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import Profile from "../../Image/profile.jpg"
 import Button from '@restart/ui/esm/Button';
 import "./About.css"
+import Profile from "../../Images/profile.jpg"
 
 const About = () => {
+
     return (
         <div>
             <div className="container">
+                <h1 className="my-5 fw-bold text-center">About Me</h1>
                 <div className="row m-0 ">
                     <div className="col-lg-4 m-auto ">
                         <div className="p-4 d-flex justify-content-center align-items-center">
