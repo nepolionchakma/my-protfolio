@@ -11,10 +11,10 @@ const Blogs = () => {
             <h1 className="my-5 fw-bold text-center">Latest Posts</h1>
             <div className="row m-0 ">
 
-                <div className="col-lg-4  py-3 rounded ">
+                <div className="col-lg-4 col-md-6 col-sm-6 col-12  py-3 rounded ">
                     <ScrollAnimation animateIn='fadeInLeft'
                         animateOut='fadeOut'>
-                        <div className=" service-1  m-2 rounded">
+                        <div className=" service-1 hover m-2 rounded">
                             <img className="w-100" src="https://bolby-react.vercel.app/images/blog/1.svg" alt="" />
                             <div className="p-3">
                                 <h3 className="my-3 fw-bold">Full-Stack Development</h3>
@@ -53,13 +53,13 @@ const Blogs = () => {
                         </div>
                     </ScrollAnimation>
                 </div>
-                <div className="col-lg-4  py-3 rounded ">
+                <div className="col-lg-4 col-md-6 col-sm-6 col-12  py-3 rounded ">
                     <ScrollAnimation animateIn='fadeInLeft'
                         animateOut='fadeOut'>
-                        <div className=" service-1  m-2 rounded">
+                        <div className=" service-1 hover m-2 rounded">
                             <img className="w-100" src="https://bolby-react.vercel.app/images/blog/2.svg" alt="" />
                             <div className="p-3">
-                                <h3 className="my-3 fw-bold">Full-Stack Development</h3>
+                                <h3 className="my-3 fw-bold">Fornt-End Development</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, dolor.</p>
                             </div>
                             <>
@@ -95,13 +95,13 @@ const Blogs = () => {
                         </div>
                     </ScrollAnimation>
                 </div>
-                <div className="col-lg-4  py-3 rounded ">
+                <div className="col-lg-4 col-md-6 col-sm-6 col-12  py-3 rounded ">
                     <ScrollAnimation animateIn='fadeInLeft'
                         animateOut='fadeOut'>
-                        <div className=" service-1  m-2 rounded">
+                        <div className=" service-1 hover m-2 rounded">
                             <img className="w-100" src="https://bolby-react.vercel.app/images/blog/3.svg" alt="" />
                             <div className="p-3">
-                                <h3 className="my-3 fw-bold">Full-Stack Development</h3>
+                                <h3 className="my-3 fw-bold">Back-End Development</h3>
                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, dolor.</p>
                             </div>
                             <>

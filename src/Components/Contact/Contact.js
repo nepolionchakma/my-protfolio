@@ -10,7 +10,7 @@ const Contact = () => {
 
     const sendEmail = (e) => {
         e.preventDefault();
-        alert("send")
+        alert("Send Successfully, Thank You.")
 
         emailjs.sendForm('gmail', 'portfolio', form.current, 'user_Vdq6cw6v58oS4ztuLSfrc')
             .then((result) => {
@@ -26,12 +26,13 @@ const Contact = () => {
                 animateOut='fadeOut'>
                 <h1 className="my-5 fw-bold text-center text-white">Get in Touch</h1>
                 <div className="row m-0">
-                    <div className="col-lg-2 text-white">
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-12 my-4 text-white">
                         <h3 className="fw-bold">Let's talk about everything!</h3>
                         <p>Don't like forms? Send me an email.</p>
+                        <img className="w-100 my-3 " src="https://i.ibb.co/fFN3kW5/world-map-png-35423.png" alt="" />
                     </div>
 
-                    <div className="col-lg-9 text-white">
+                    <div className="col-lg-6 col-md-6 col-sm-6 col-12  my-3 text-white">
                         <form ref={form} onSubmit={sendEmail}>
                             <Box
                                 sx={{
